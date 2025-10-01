@@ -7,6 +7,7 @@ import {
     GOOGLE_TRANSLATE_CODES,
     TranslateConfig,
 } from "./translate-config";
+
 require("dotenv").config();
 
 // Use configuration
@@ -32,9 +33,11 @@ try {
     if (!process.env.GOOGLE_TRANSLATE_PROJECT_ID) {
         throw new Error("GOOGLE_TRANSLATE_PROJECT_ID is not set");
     }
+
     if (!process.env.GOOGLE_TRANSLATE_KEY) {
         throw new Error("GOOGLE_TRANSLATE_KEY is not set");
     }
+
     translate = new Translate({
         projectId: process.env.GOOGLE_TRANSLATE_PROJECT_ID,
         key: process.env.GOOGLE_TRANSLATE_KEY,
