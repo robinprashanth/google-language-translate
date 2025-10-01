@@ -12,16 +12,11 @@ A standalone TypeScript project for automatically translating missing i18n keys 
 
 2. **Set up Google Cloud credentials:**
 
-    Option A - Service Account Key:
+    create .env file and add google translate API key:
 
     ```bash
-    export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-key.json"
-    ```
-
-    Option B - Application Default Credentials:
-
-    ```bash
-    gcloud auth application-default login
+    GOOGLE_TRANSLATE_KEY=AIxxxxxxxxxxxxxxxxxx-xxxx0
+    GOOGLE_TRANSLATE_PROJECT_ID="google-translate"
     ```
 
 3. **Copy your i18n.ts file:**
@@ -40,19 +35,13 @@ npm run translate:test
 ### Translate missing keys:
 
 ```bash
-npm run translate:missing
+npm run start
 ```
 
 ### Build the project:
 
 ```bash
 npm run build
-```
-
-### Run compiled version:
-
-```bash
-npm start
 ```
 
 ## Features
@@ -82,6 +71,8 @@ Edit `src/translate-config.ts` to customize:
 -   Italian (it)
 -   Portuguese (pt)
 -   Japanese (ja)
+
+Add more language as per the requirement
 
 ## Project Structure
 
