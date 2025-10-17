@@ -21,7 +21,7 @@ export const defaultConfig: TranslateConfig = {
     apiDelay: 100, // 100ms delay between API calls
     maxRetries: 3,
     verbose: true,
-    targetLanguages: ["es", "fr", "de", "it", "pt", "ja"],
+    targetLanguages: ["es", "fr", "de", "it", "pt", "ja", "ko", "zh-CN"],
     // projectId will be auto-detected from Google Cloud credentials
 };
 
@@ -33,6 +33,8 @@ export const LANGUAGE_NAMES: Record<string, string> = {
     it: "Italian (Italiano)",
     pt: "Portuguese (Português)",
     ja: "Japanese (日本語)",
+    ko: "Korean (한국어)",
+    "zh-CN": "Chinese (Simplified) (中文（简体）)",
 };
 
 // Google Translate API language codes
@@ -43,4 +45,6 @@ export const GOOGLE_TRANSLATE_CODES: Record<string, string> = {
     it: "it",
     pt: "pt",
     ja: "ja",
+    ko: "ko",
+    "zh-CN": "zh-CN",
 };
